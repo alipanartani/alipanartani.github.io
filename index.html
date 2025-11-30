@@ -15,16 +15,15 @@ layout: null
     <hr>
     <h2>welcome to my personal site</h2>
     <h2>Blog Posts</h2>
+    
+<!-- Remove the diagnostic line if you want to clean it up -->
+<!-- <p>Jekyll found {{ site.posts.size }} posts.</p> -->
+    
 <ul class="post-list">
   {% for post in site.posts %}
     <li>
-      <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
-      <h3>
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </h3>
-      {% if site.show_excerpts %}
-        {{ post.excerpt }}
-      {% endif %}
+      <!-- Keep only the link here -->
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>
