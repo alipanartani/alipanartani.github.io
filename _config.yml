@@ -1,0 +1,7 @@
+title: Site Title
+author: Ali
+description: Sample testing
+theme: minima
+minima:
+  date_format: "%b - %d, %Y"
+show_excerpts: true
