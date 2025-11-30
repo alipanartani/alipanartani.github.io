@@ -10,6 +10,21 @@
     <h1>Ali Pan-Artani</h1>
     <hr>
     <h2>welcome to my personal site</h2>
+    <h2>Blog Posts</h2>
+<ul class="post-list">
+  {% for post in site.posts %}
+    <li>
+      <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+      <h3>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h3>
+      {% if site.show_excerpts %}
+        {{ post.excerpt }}
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
   </main>
 </body>
 </html>
